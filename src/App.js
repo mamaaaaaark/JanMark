@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// eslint-disable-next-line
+import React from "react";
 import "./App.css";
 
 function App() {
@@ -31,23 +30,27 @@ function App() {
 
   return (
     <div className="App">
-      {/* Sidebar */}
-      <div className="sidebar">
+      {/* Top Navbar */}
+      <nav className="navbar">
+        <div className="navbar-logo" onClick={() => window.location.reload()}>
+          <img src="/icons/Icon.png" alt="Refresh" className="refresh-icon" />
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <main className="main-content">
         <header>
           <h1 className="name">Hi! My name is Jan Mark Arreza</h1>
         </header>
         <section className="about-section">
           <h2>About Me</h2>
           <p>
-            Hello! I'm Jan Mark Arreza, a web developer with a passion for
-            building functional and user-friendly applications. I enjoy learning
-            new technologies and creating solutions that make an impact.
+            Hello! I'm Jan Mark Arreza, a web developer with a passion for building functional and user-friendly applications. 
+            I am constantly striving to expand my knowledge and explore new technologies. 
+            I enjoy learning new programming languages and experimenting with creative design ideas to make my projects stand out.
           </p>
         </section>
-      </div>
 
-      {/* Main Content */}
-      <main className="main-content">
         {/* Experience Section */}
         <section className="experience-section">
           <h2>Experience</h2>
@@ -59,7 +62,7 @@ function App() {
             <ul>
               <li>
                 Automated server connection checks using C#, .Net, and Blazor,
-                reducing manual effort, minimizing errors, and providing
+                reducing manual effort,minimizing errors, and providing
                 real-time updates on connection statuses for efficient
                 monitoring.
               </li>
@@ -103,13 +106,17 @@ function App() {
           </div>
         </section>
 
-        {/* Contact Section - Moved below Projects */}
+        {/* Contact Section */}
         <section className="contact-section">
-            <h2>Contact</h2>
-              <div className="contact-info">
-                <a href="mailto:arrezajanmark@gmail.com" className="contact-link">arrezajanmark@gmail.com</a>
-                <p>+639455496886</p>
-              </div>
+          <h2>Contact</h2>
+          <div className="contact-info">
+            <a href="mailto:arrezajanmark@gmail.com" className="contact-link">
+              arrezajanmark@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/jan-mark-arreza-689a77329/" className="contact-link">
+              LinkedIn
+            </a>
+          </div>
         </section>
       </main>
     </div>
